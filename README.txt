@@ -1,6 +1,42 @@
 ZombiU (EUR) sur Cemu Android 0.5.2 - correctifs experimentaux
 ==============================================================
 
+ENGLISH
+-------
+These two graphic packs let ZombiU EUR boot and play on
+Cemu Android SapphireRhodonite 0.5.2 (tested on an AYN Thor).
+
+- ZombiU_RPLFix_v1: the game loads its script library through a path this
+  Cemu build cannot resolve. Without it: crash at startup.
+- ZombiU_AudioFix_v1: this Cemu build reads the game's MIX volume/pan values
+  with swapped bytes. Without it: crash right after the intro.
+
+Official Cemu (PC) already fixed these bugs (June-July 2026).
+Cemu Android 0.5.2 does not include those fixes yet.
+
+Requirements
+- Cemu Android SapphireRhodonite 0.5.2.
+- ZombiU EUR, title ID 000500001010EF00, disc version without update (v0).
+  Other versions or regions: the packs simply do not activate.
+
+Install without a PC
+1. In Cemu's main menu, tap "Open Cemu folder".
+   The Files app opens Cemu's folder.
+2. Copy the ZombiU_RPLFix_v1 and ZombiU_AudioFix_v1 folders into graphicPacks.
+3. Restart Cemu. Both packs are enabled by default
+   (Graphic packs > ZombiU > Workarounds).
+
+With a PC and ADB
+  adb push ZombiU_RPLFix_v1 /sdcard/Android/data/info.cemu.cemu/files/graphicPacks/
+  adb push ZombiU_AudioFix_v1 /sdcard/Android/data/info.cemu.cemu/files/graphicPacks/
+
+Important
+- Experimental, tested on a single device.
+- If your Cemu Android build gets the official audio fix (Cemu commit
+  c2d428e), remove ZombiU_AudioFix_v1: it would distort audio again.
+- Reverb and echo effects are missing (not implemented in this Cemu build).
+- GamePad audio is not mixed by this Cemu build; TV audio works.
+
 FRANCAIS
 --------
 Ces deux packs permettent a ZombiU EUR de demarrer et de se jouer sur
@@ -39,39 +75,3 @@ Important
   (non implementes dans ce Cemu).
 - Le son du GamePad n'est pas mixe par ce Cemu ; le son TV fonctionne.
 
-
-ENGLISH
--------
-These two graphic packs let ZombiU EUR boot and play on
-Cemu Android SapphireRhodonite 0.5.2 (tested on an AYN Thor).
-
-- ZombiU_RPLFix_v1: the game loads its script library through a path this
-  Cemu build cannot resolve. Without it: crash at startup.
-- ZombiU_AudioFix_v1: this Cemu build reads the game's MIX volume/pan values
-  with swapped bytes. Without it: crash right after the intro.
-
-Official Cemu (PC) already fixed these bugs (June-July 2026).
-Cemu Android 0.5.2 does not include those fixes yet.
-
-Requirements
-- Cemu Android SapphireRhodonite 0.5.2.
-- ZombiU EUR, title ID 000500001010EF00, disc version without update (v0).
-  Other versions or regions: the packs simply do not activate.
-
-Install without a PC
-1. In Cemu's main menu, tap "Open Cemu folder".
-   The Files app opens Cemu's folder.
-2. Copy the ZombiU_RPLFix_v1 and ZombiU_AudioFix_v1 folders into graphicPacks.
-3. Restart Cemu. Both packs are enabled by default
-   (Graphic packs > ZombiU > Workarounds).
-
-With a PC and ADB
-  adb push ZombiU_RPLFix_v1 /sdcard/Android/data/info.cemu.cemu/files/graphicPacks/
-  adb push ZombiU_AudioFix_v1 /sdcard/Android/data/info.cemu.cemu/files/graphicPacks/
-
-Important
-- Experimental, tested on a single device.
-- If your Cemu Android build gets the official audio fix (Cemu commit
-  c2d428e), remove ZombiU_AudioFix_v1: it would distort audio again.
-- Reverb and echo effects are missing (not implemented in this Cemu build).
-- GamePad audio is not mixed by this Cemu build; TV audio works.
