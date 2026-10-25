@@ -1,0 +1,7 @@
+[Definition]
+titleIds = 000500001010ef00
+name = Correctif chargement scripts ZombiU EUR v0
+path = "ZombiU/Workarounds/Chargement RPL Android v1"
+description = Correctif experimental pour Sapphire 0.5.2 : charge Rabbids_cafe_f.rpl depuis code et evite le nom de notification non initialise. Conserve les vrais resultats du chargement.
+version = 8
+default = 1

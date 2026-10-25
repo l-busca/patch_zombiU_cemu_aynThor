@@ -1,0 +1,7 @@
+[Definition]
+titleIds = 000500001010ef00
+name = Correctif audio MIX ZombiU EUR v0
+path = "ZombiU/Workarounds/Correctif audio MIX Android v1"
+description = Correctif experimental pour Sapphire 0.5.2 : transmet a MIXInitDeviceControl les volumes et panoramiques dans l ordre des octets attendu par ce fork. Evite le plantage du mixeur audio. A utiliser avec le correctif RPL v1.
+version = 8
+default = 1
